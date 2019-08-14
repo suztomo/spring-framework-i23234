@@ -54,9 +54,13 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 
 This is what "using a logging framework requires more than that" means.
 
-However, I don't think declaring slf4j in pom.xml is wrong information.
+# My Opinion
+
+However, I don't think declaring slf4j or log4j in pom.xml is wrong information.
 Spring-jcl's logging bridge's role is to forward logs to log4j or slf4j.
-It should not care what logging backends should be present, because it's slf4j's usage.
-So spring-jcl's declaring logging-bridge options in pom.xml (as it does in
+Picking up logging backend or setting up logger configuration is under slf4j's usage, rather than
+spring-jcl's usage. Spring-jcl does not need to declare logging backend in its pom.xml.
+
+Therefore, spring-jcl's logging-bridge options in pom.xml (as it does in
 [spring-jcl 5.1.9.RELEASE](https://search.maven.org/artifact/org.springframework/spring-jcl/5.1.9.RELEASE/jar))
-is reasonable.
+is not wrong information.
