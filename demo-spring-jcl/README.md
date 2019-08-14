@@ -34,7 +34,7 @@ Having slf4j in dependency is not sufficient to enable it.
 This demo has dependency to spring-jcl, slf4j and logback-classic.
 This demo uses `org.apache.commons.logging.Log` to output a message.
 
-`spring-jcl`'s `org.apache.commons.logging.LogAdapter` detects the presence of slf4j and redirects
+Spring-jcl's `org.apache.commons.logging.LogAdapter` detects the presence of slf4j and redirects
 the log to slf4j.
 
 Running `suztomo.App` outputs two lines of log message:
@@ -53,3 +53,10 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 ```
 
 This is what "using a logging framework requires more than that" means.
+
+However, I don't think declaring slf4j in pom.xml is wrong information.
+Spring-jcl's logging bridge's role is to forward logs to log4j or slf4j.
+It should not care what logging backends should be present, because it's slf4j's usage.
+So spring-jcl's declaring logging-bridge options in pom.xml (as it does in
+[spring-jcl 5.1.9.RELEASE](https://search.maven.org/artifact/org.springframework/spring-jcl/5.1.9.RELEASE/jar))
+is reasonable.
