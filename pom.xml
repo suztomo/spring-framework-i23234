@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>demo-spring-jcl</module>
+    <module>demo-spring-core-netty</module>
   </modules>
 
   <name>spring-framework issue 23234</name>
