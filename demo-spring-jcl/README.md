@@ -37,11 +37,11 @@ This demo uses `org.apache.commons.logging.Log` to output a message.
 Spring-jcl's `org.apache.commons.logging.LogAdapter` detects the presence of slf4j and redirects
 the log to slf4j.
 
-Running `suztomo.App` outputs two lines of log message:
+Running `suztomo.AppNetty` outputs two lines of log message:
 
 ```
-09:01:03.988 [main] INFO suztomo.App - Hello, spring-jcl log!
-09:01:03.990 [main] INFO suztomo.App - Hello, slf4j log!
+09:01:03.988 [main] INFO suztomo.AppNetty - Hello, spring-jcl log!
+09:01:03.990 [main] INFO suztomo.AppNetty - Hello, slf4j log!
 ```
 
 When `logback-classic` dependency is omitted, no message is output:

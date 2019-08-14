@@ -11,8 +11,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>demo-spring-core-netty</artifactId>
+  <packaging>pom</packaging>
 
   <name>demo-spring-core-netty</name>
+  <modules>
+    <module>demo-spring-webflux</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
