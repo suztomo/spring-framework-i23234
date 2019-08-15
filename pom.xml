@@ -11,6 +11,7 @@
   <modules>
     <module>demo-spring-jcl</module>
     <module>demo-spring-core-netty</module>
+    <module>demo-spring-and-servlet</module>
   </modules>
 
   <name>spring-framework issue 23234</name>
@@ -33,6 +34,11 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
         <version>${spring.version}</version>
       </dependency>
     </dependencies>
