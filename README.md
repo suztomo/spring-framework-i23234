@@ -59,8 +59,8 @@ For example spring-webflux has following in build.gradle:
 
 ## My Opinion
 
-Optional dependencies do not cause clashes. Maven adds these optional dependencies to a class path
-only when it is project's direct dependencies.
+Optional dependencies in libraries do not cause clashes. Maven adds these optional dependencies to
+a class path only when it is project's direct dependencies.
 For example spring-web's pom.xml declaring optional dependency to servlet-api 3.1.0 (as it does in
 [5.1.9.RELEASE](https://search.maven.org/artifact/org.springframework/spring-web/5.1.9.RELEASE/jar))
 does not have any effect in a Spring application's project. Users do not need to write exclusions
@@ -94,5 +94,20 @@ Central:
 ```
 		testCompile("org.hamcrest:hamcrest-all:1.3")
 ```
+
+
+# On javax spec
+
+Picking up servlet spec (`javax.servlet:javax.servlet-api:3.1.0`), the version of this specification
+helps to pickup correct implementation to support the specification. The optional dependencies
+declared in pom.xml can express your intention below:
+
+> While the Framework itself is compatible with Servlet 3.1+, some modules might build specific
+> support for Servlet 4 features.
+
+--------------
+
+These are my feedback on the decision of not adding `optional` dependencies in published pom.xml.
+Anyway, thank you for the detailed explanation of the background of the decision.
 
 
