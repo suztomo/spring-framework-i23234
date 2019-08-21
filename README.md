@@ -98,12 +98,14 @@ Central:
 
 # On javax spec
 
-Picking up servlet spec (`javax.servlet:javax.servlet-api:3.1.0`), the version of this specification
-helps to pickup correct implementation to support the specification. The optional dependencies
-declared in pom.xml can express your intention below:
+> now about the javax specs: they do not list the dependencies you need for a specific feature (you
+> need the actual implementations, without our custom exclusions). The versions we're using do not
+> show necessarily the minimum version supported by Spring, nor the advised one.
 
-> While the Framework itself is compatible with Servlet 3.1+, some modules might build specific
-> support for Servlet 4 features.
+The version of a specification used to compile a library indicates that the project supports the
+specification of that version, without specifying other earlier or later versions.
+I don't see this is wrong information, even if the library can work with other versions of
+specification.
 
 --------------
 
